@@ -1,0 +1,11 @@
+C:\Users\Sajeruk\source\repos\testovik\testovik\obj\Debug\netcoreapp3.0\testovik.csprojAssemblyReference.cache
+C:\Users\Sajeruk\source\repos\testovik\testovik\obj\Debug\netcoreapp3.0\testovik.AssemblyInfoInputs.cache
+C:\Users\Sajeruk\source\repos\testovik\testovik\obj\Debug\netcoreapp3.0\testovik.AssemblyInfo.cs
+C:\Users\Sajeruk\source\repos\testovik\testovik\bin\Debug\netcoreapp3.0\testovik.exe
+C:\Users\Sajeruk\source\repos\testovik\testovik\bin\Debug\netcoreapp3.0\testovik.deps.json
+C:\Users\Sajeruk\source\repos\testovik\testovik\bin\Debug\netcoreapp3.0\testovik.runtimeconfig.json
+C:\Users\Sajeruk\source\repos\testovik\testovik\bin\Debug\netcoreapp3.0\testovik.runtimeconfig.dev.json
+C:\Users\Sajeruk\source\repos\testovik\testovik\bin\Debug\netcoreapp3.0\testovik.dll
+C:\Users\Sajeruk\source\repos\testovik\testovik\bin\Debug\netcoreapp3.0\testovik.pdb
+C:\Users\Sajeruk\source\repos\testovik\testovik\obj\Debug\netcoreapp3.0\testovik.dll
+C:\Users\Sajeruk\source\repos\testovik\testovik\obj\Debug\netcoreapp3.0\testovik.pdb
