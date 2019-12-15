@@ -30,12 +30,12 @@ namespace testovik
                 File.Create("C:/Jopa/users").Close();
             }
 
-            //(a)97-(z)122. (A)65-(Z)90. (А)1040-(Я)1071. (а)1072-1103(я). (0)48-(9)57
+            //(a)97-(z)122. (A)65-(Z)90. (Рђ)1040-(РЇ)1071. (Р°)1072-1103(СЏ). (0)48-(9)57
 
             while (true)
             {
 
-                Console.WriteLine("Введите имя...");
+                Console.WriteLine("Р’РІРµРґРёС‚Рµ Р»РѕРіРёРЅ...");
 
                 Console.WriteLine(name);
 
@@ -65,7 +65,7 @@ namespace testovik
             while (true)
             {
 
-                Console.WriteLine("Введите пароль...");
+                Console.WriteLine("Р’РІРµРґРёС‚Рµ РїР°СЂРѕР»СЊ...");
 
                 for(int count = 0; count < passwd.Length; count++)
                 {
@@ -98,7 +98,7 @@ namespace testovik
             while (true)
             {
 
-                Console.WriteLine("Введите роль...");
+                Console.WriteLine("Р’РІРµРґРёС‚Рµ СЂРѕР»СЊ...");
 
                 Console.WriteLine(rol_rez);
 
@@ -123,22 +123,22 @@ namespace testovik
 
             }
 
-            if (rol_rez == "Отдел кадров")
+            if (rol_rez == "РћС‚РґРµР» РєР°РґСЂРѕРІ")
             {
                 rol = 1;
             }
 
-            if (rol_rez == "Бугалтерия")
+            if (rol_rez == "Р‘СѓРіР°Р»С‚РµСЂРёСЏ")
             {
                 rol = 2;
             }
 
-            if (rol_rez == "Склад")
+            if (rol_rez == "РЎРєР»Р°Рґ")
             {
                 rol = 3;
             }
 
-            if (rol_rez == "Касса")
+            if (rol_rez == "РљР°СЃСЃР°")
             {
                 rol = 4;
             }

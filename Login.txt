@@ -61,10 +61,10 @@ namespace testovik
             
             br.Close();
 
-            Console.WriteLine("Введите логин...");
+            Console.WriteLine("Р’РІРµРґРёС‚Рµ Р»РѕРіРёРЅ...");
             name = Console.ReadLine();
 
-            Console.WriteLine("Введите пароль...");
+            Console.WriteLine("Р’РІРµРґРёС‚Рµ РїР°СЂРѕР»СЊ...");
             passwd = Console.ReadLine();
 
             for(int count = 0; count < kol; count++)
