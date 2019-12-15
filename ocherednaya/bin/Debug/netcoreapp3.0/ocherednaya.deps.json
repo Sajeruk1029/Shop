@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.0": {
-      "testovik/1.0.0": {
+      "ocherednaya/1.0.0": {
         "runtime": {
-          "testovik.dll": {}
+          "ocherednaya.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "testovik/1.0.0": {
+    "ocherednaya/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

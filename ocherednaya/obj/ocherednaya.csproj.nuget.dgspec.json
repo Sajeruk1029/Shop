@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sajeruk\\source\\repos\\testovik\\testovik\\testovik.csproj": {}
+    "C:\\Users\\Sajeruk\\source\\repos\\ocherednaya\\ocherednaya\\ocherednaya.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sajeruk\\source\\repos\\testovik\\testovik\\testovik.csproj": {
+    "C:\\Users\\Sajeruk\\source\\repos\\ocherednaya\\ocherednaya\\ocherednaya.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sajeruk\\source\\repos\\testovik\\testovik\\testovik.csproj",
-        "projectName": "testovik",
-        "projectPath": "C:\\Users\\Sajeruk\\source\\repos\\testovik\\testovik\\testovik.csproj",
+        "projectUniqueName": "C:\\Users\\Sajeruk\\source\\repos\\ocherednaya\\ocherednaya\\ocherednaya.csproj",
+        "projectName": "ocherednaya",
+        "projectPath": "C:\\Users\\Sajeruk\\source\\repos\\ocherednaya\\ocherednaya\\ocherednaya.csproj",
         "packagesPath": "C:\\Users\\Sajeruk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sajeruk\\source\\repos\\testovik\\testovik\\obj\\",
+        "outputPath": "C:\\Users\\Sajeruk\\source\\repos\\ocherednaya\\ocherednaya\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sajeruk\\AppData\\Roaming\\NuGet\\NuGet.Config",

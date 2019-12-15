@@ -1,0 +1,11 @@
+C:\Users\Sajeruk\source\repos\ocherednaya\ocherednaya\bin\Debug\netcoreapp3.0\ocherednaya.exe
+C:\Users\Sajeruk\source\repos\ocherednaya\ocherednaya\bin\Debug\netcoreapp3.0\ocherednaya.deps.json
+C:\Users\Sajeruk\source\repos\ocherednaya\ocherednaya\bin\Debug\netcoreapp3.0\ocherednaya.runtimeconfig.json
+C:\Users\Sajeruk\source\repos\ocherednaya\ocherednaya\bin\Debug\netcoreapp3.0\ocherednaya.runtimeconfig.dev.json
+C:\Users\Sajeruk\source\repos\ocherednaya\ocherednaya\bin\Debug\netcoreapp3.0\ocherednaya.dll
+C:\Users\Sajeruk\source\repos\ocherednaya\ocherednaya\bin\Debug\netcoreapp3.0\ocherednaya.pdb
+C:\Users\Sajeruk\source\repos\ocherednaya\ocherednaya\obj\Debug\netcoreapp3.0\ocherednaya.csprojAssemblyReference.cache
+C:\Users\Sajeruk\source\repos\ocherednaya\ocherednaya\obj\Debug\netcoreapp3.0\ocherednaya.AssemblyInfoInputs.cache
+C:\Users\Sajeruk\source\repos\ocherednaya\ocherednaya\obj\Debug\netcoreapp3.0\ocherednaya.AssemblyInfo.cs
+C:\Users\Sajeruk\source\repos\ocherednaya\ocherednaya\obj\Debug\netcoreapp3.0\ocherednaya.dll
+C:\Users\Sajeruk\source\repos\ocherednaya\ocherednaya\obj\Debug\netcoreapp3.0\ocherednaya.pdb
