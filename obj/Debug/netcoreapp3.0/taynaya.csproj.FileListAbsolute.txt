@@ -1,0 +1,11 @@
+C:\Users\Sajeruk\source\repos\ocherednaya\taynaya\bin\Debug\netcoreapp3.0\taynaya.exe
+C:\Users\Sajeruk\source\repos\ocherednaya\taynaya\bin\Debug\netcoreapp3.0\taynaya.deps.json
+C:\Users\Sajeruk\source\repos\ocherednaya\taynaya\bin\Debug\netcoreapp3.0\taynaya.runtimeconfig.json
+C:\Users\Sajeruk\source\repos\ocherednaya\taynaya\bin\Debug\netcoreapp3.0\taynaya.runtimeconfig.dev.json
+C:\Users\Sajeruk\source\repos\ocherednaya\taynaya\bin\Debug\netcoreapp3.0\taynaya.dll
+C:\Users\Sajeruk\source\repos\ocherednaya\taynaya\bin\Debug\netcoreapp3.0\taynaya.pdb
+C:\Users\Sajeruk\source\repos\ocherednaya\taynaya\obj\Debug\netcoreapp3.0\taynaya.csprojAssemblyReference.cache
+C:\Users\Sajeruk\source\repos\ocherednaya\taynaya\obj\Debug\netcoreapp3.0\taynaya.AssemblyInfoInputs.cache
+C:\Users\Sajeruk\source\repos\ocherednaya\taynaya\obj\Debug\netcoreapp3.0\taynaya.AssemblyInfo.cs
+C:\Users\Sajeruk\source\repos\ocherednaya\taynaya\obj\Debug\netcoreapp3.0\taynaya.dll
+C:\Users\Sajeruk\source\repos\ocherednaya\taynaya\obj\Debug\netcoreapp3.0\taynaya.pdb
