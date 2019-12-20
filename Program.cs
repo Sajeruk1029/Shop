@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -357,7 +357,7 @@ namespace taynaya
 
         static void kadrs()
         {
-            string[] menu = { "Добавить данные сотрудника.", "Просмотр данных сотрудника.", "Выход." };
+            string[] menu = { "Добавить данные сотрудника.", "Просмотр данных сотрудника.", "Удалить данные сотрудника.", "Выход." };
             int count, count2, pos = 0;
             ConsoleKeyInfo key;
 
@@ -430,6 +430,12 @@ namespace taynaya
 
                     if (pos == 2)
                     {
+                        Console.Clear();
+                        kadri_del();
+                    }
+
+                    if(pos == 3)
+                    {
                         return;
                     }
                 }
@@ -457,44 +463,96 @@ namespace taynaya
             Console.WriteLine("Введите отчество...");
             rez_kadri.otchestvo = Console.ReadLine();
 
-            Console.WriteLine("Введите номер договора...");
-            rez_kadri.number_dogovora = Console.ReadLine();
-            while (!int.TryParse(rez_kadri.number_dogovora, out rez))
+            while (true)
             {
-                Console.WriteLine("Введен некорректный номер договора.");
+                Console.WriteLine("Введите номер договора...");
                 rez_kadri.number_dogovora = Console.ReadLine();
+
+                while (!int.TryParse(rez_kadri.number_dogovora, out rez))
+                {
+                    Console.WriteLine("Введен некорректный номер договора.");
+                    rez_kadri.number_dogovora = Console.ReadLine();
+                }
+
+                if((rez_kadri.number_dogovora[0] == '+') || (rez_kadri.number_dogovora[0] == '-'))
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+
             }
 
-            Console.WriteLine("Введите день рождения...");
-            rez_kadri.day_rojdeniya = Console.ReadLine();
-            while ((!int.TryParse(rez_kadri.day_rojdeniya, out rez)) || (rez < 1) || (rez > 31))
+            while (true)
             {
-                Console.WriteLine("Введен некорректный день рождения.");
+
+                Console.WriteLine("Введите день рождения...");
+
                 rez_kadri.day_rojdeniya = Console.ReadLine();
+                while ((!int.TryParse(rez_kadri.day_rojdeniya, out rez)) || (rez < 1) || (rez > 31))
+                {
+                    Console.WriteLine("Введен некорректный день рождения.");
+                    rez_kadri.day_rojdeniya = Console.ReadLine();
+                }
+
+                if ((rez_kadri.day_rojdeniya[0] == '+') || (rez_kadri.day_rojdeniya[0] == '-'))
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+
             }
 
-            Console.WriteLine("Введите месяц рождения...");
-            rez_kadri.mesac_rojdeniya = Console.ReadLine();
-            while ((!int.TryParse(rez_kadri.mesac_rojdeniya, out rez)) || (rez < 1) || (rez > 12))
+            while (true)
             {
-                Console.WriteLine("Введен некорректный месяц.");
+
+                Console.WriteLine("Введите месяц рождения...");
                 rez_kadri.mesac_rojdeniya = Console.ReadLine();
+                
+                while ((!int.TryParse(rez_kadri.mesac_rojdeniya, out rez)) || (rez < 1) || (rez > 12))
+                {
+                    Console.WriteLine("Введен некорректный месяц.");
+                    rez_kadri.mesac_rojdeniya = Console.ReadLine();
+                }
+
+                if ((rez_kadri.mesac_rojdeniya[0] == '+') || (rez_kadri.mesac_rojdeniya[0] == '-'))
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+
             }
 
-            Console.WriteLine("Введите год рождения...");
-            rez_kadri.year_rojdeniya = Console.ReadLine();
-            while (!int.TryParse(rez_kadri.year_rojdeniya, out rez))
+            while (true)
             {
-                Console.WriteLine("Введен некорректный год.");
+
+                Console.WriteLine("Введите год рождения...");
                 rez_kadri.year_rojdeniya = Console.ReadLine();
-            }
 
-            Console.Clear();
-            for (count = 0; count < kadri_data.Count; count++)
-            {
-                Console.WriteLine(kadri_data[count].pasport_seriya);
+                while (!int.TryParse(rez_kadri.year_rojdeniya, out rez))
+                {
+                    Console.WriteLine("Введен некорректный год.");
+                    rez_kadri.year_rojdeniya = Console.ReadLine();
+                }
+
+                if ((rez_kadri.year_rojdeniya[0] == '+') || (rez_kadri.year_rojdeniya[0] == '-'))
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+
             }
-            Console.ReadKey();
 
             while (true)
             {
@@ -528,10 +586,22 @@ namespace taynaya
                     ok = true;
                 }
 
-                if (ok)
+                if ((rez_kadri.pasport_seriya[0] == '+') || (rez_kadri.pasport_seriya[0] == '-'))
                 {
-                    break;
+                    continue;
                 }
+                else
+                {
+                    if(ok)
+                    {
+                        break;
+                    }
+                }
+
+                //if (ok)
+                //{
+                    //break;
+                //}
 
             }
 
@@ -559,7 +629,7 @@ namespace taynaya
                     }
                     else
                     {
-                        ok = true;
+                      ok = true;
                     }
                 }
 
@@ -568,11 +638,17 @@ namespace taynaya
                     ok = true;
                 }
 
-                if (ok)
+                if ((rez_kadri.pasport_number[0] == '+') || (rez_kadri.pasport_number[0] == '-'))
                 {
-                    break;
+                    continue;
                 }
-
+                else
+                {
+                    if (ok)
+                    {
+                        break;
+                    }
+                }
             }
 
             ok = false;
@@ -608,9 +684,16 @@ namespace taynaya
                     ok = true;
                 }
 
-                if (ok)
+                if ((rez_kadri.snils[0] == '+') || (rez_kadri.snils[0] == '-'))
                 {
-                    break;
+                    continue;
+                }
+                else
+                {
+                    if (ok)
+                    {
+                        break;
+                    }
                 }
 
             }
@@ -647,10 +730,17 @@ namespace taynaya
                 {
                     ok = true;
                 }
-                                   
-                if (ok)
+
+                if ((rez_kadri.inn[0] == '+') || (rez_kadri.inn[0] == '-'))
                 {
-                    break;
+                    continue;
+                }
+                else
+                {
+                    if (ok)
+                    {
+                        break;
+                    }
                 }
 
             }
@@ -755,9 +845,72 @@ namespace taynaya
 
         }
 
+        static void kadri_del()
+        {
+            string name, familiya;
+            int count, count2;
+            BinaryWriter bw;
+
+            if (kadri_data.Count == 0)
+            {
+                Console.WriteLine("Отсутствуют данные для удаления.");
+                Console.ReadKey();
+                Console.Clear();
+                return;
+            }
+
+            Console.WriteLine("Введите имя рабочего...");
+            name = Console.ReadLine();
+            Console.WriteLine("Введите фамилию рабочего...");
+            familiya = Console.ReadLine();
+
+
+            for (count = 0; count < kadri_data.Count; count++)
+            {
+                if ((kadri_data[count].name == name) && (kadri_data[count].familiya == familiya))
+                {
+                    kadri_data.RemoveAt(count);
+                    Console.WriteLine("Успех!");
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    bw = new BinaryWriter(new FileStream("C:/Taynaya/kadrs", FileMode.Create));
+
+                    for(count2 = 0; count2 < kadri_data.Count; count2++)
+                    {
+                        bw.Write(kadri_data[count2].name);
+                        bw.Write(kadri_data[count2].familiya);
+                        bw.Write(kadri_data[count2].otchestvo);
+                        bw.Write(kadri_data[count2].number_dogovora);
+                        bw.Write(kadri_data[count2].day_rojdeniya);
+                        bw.Write(kadri_data[count2].mesac_rojdeniya);
+                        bw.Write(kadri_data[count2].year_rojdeniya);
+                        bw.Write(kadri_data[count2].pasport_seriya);
+                        bw.Write(kadri_data[count2].pasport_number);
+                        bw.Write(kadri_data[count2].snils);
+                        bw.Write(kadri_data[count2].inn);
+                        bw.Write(kadri_data[count2].doljnost);
+                        bw.Write(kadri_data[count2].oklad);
+                        bw.Write(kadri_data[count2].obrazovanie);
+
+                    }
+
+                    bw.Close();
+
+                    return;
+                }
+            }
+
+            Console.WriteLine("Таких данных нет. Невозможно удалить то, чего нет.");
+            Console.ReadKey();
+            Console.Clear();
+            return;
+
+        }
+
         static void bugalteriya()
         {
-            string[] menu = { "Добавить операцию.", "Просмотр операций.", "Выход." };
+            string[] menu = { "Добавить операцию.", "Просмотр операций.", "Удаление операции.", "Выход." };
             int count, count2, pos = 0;
             ConsoleKeyInfo key;
 
@@ -819,8 +972,15 @@ namespace taynaya
 
                     if (pos == 2)
                     {
+                        Console.Clear();
+                        bugalteria_del();
+                    }
+
+                    if(pos == 3)
+                    {
                         return;
                     }
+
                 }
 
                 Console.Clear();
@@ -844,12 +1004,27 @@ namespace taynaya
             rez_bugalteria.name = Console.ReadLine();
             rez_bugalteria.data = DateTime.Now.ToString();
 
-            Console.WriteLine("Введите сумму операции...");
-            rez_bugalteria.summa = Console.ReadLine();
-            while (!long.TryParse(rez_bugalteria.summa, out rez))
+            while (true)
             {
-                Console.WriteLine("Введено некорректное значение!");
+
+                Console.WriteLine("Введите сумму операции...");
                 rez_bugalteria.summa = Console.ReadLine();
+                
+                while (!long.TryParse(rez_bugalteria.summa, out rez))
+                {
+                    Console.WriteLine("Введено некорректное значение!");
+                    rez_bugalteria.summa = Console.ReadLine();
+                }
+
+                if ((rez_bugalteria.summa[0] == '+') || (rez_bugalteria.summa[0] == '-'))
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+
             }
 
             Console.Clear();
@@ -913,9 +1088,57 @@ namespace taynaya
             return;
         }
 
+        static void bugalteria_del()
+        {
+            BinaryWriter bw;
+            string name;
+            int count, count2;
+
+            if(Bugalteria_data.Count == 0)
+            {
+                Console.WriteLine("Отсутствуют данные для удаления.");
+                Console.ReadKey();
+                Console.Clear();
+                return;
+            }
+
+            Console.WriteLine("Введите имя операции...");
+            name = Console.ReadLine();
+
+            for(count = 0; count < Bugalteria_data.Count; count++)
+            {
+                if(Bugalteria_data[count].name == name)
+                {
+                    Bugalteria_data.RemoveAt(count);
+                    Console.WriteLine("Успех!");
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    bw = new BinaryWriter(new FileStream("C:/Taynaya/bugalteria", FileMode.Create));
+
+                    for (count2 = 0; count2 < kadri_data.Count; count2++)
+                    {
+                        bw.Write(Bugalteria_data[count2].name);
+                        bw.Write(Bugalteria_data[count2].data);
+                        bw.Write(Bugalteria_data[count2].summa);
+                    }
+
+                    bw.Close();
+
+                    return;
+                }
+            }
+
+            Console.WriteLine("Таких данных нет. Невозможно удалить то, чего нет.");
+            Console.ReadKey();
+            Console.Clear();
+            return;
+
+        }
+
         static void skladm()
         {
-            string[] menu = { "Добавить товар.", "Просмотреть список товаров.", "Выход." };
+            string[] menu = { "Добавить товар.", "Просмотреть список товаров.", "Удалить товар.", "Выход." };
             int count, count2, pos = 0;
             ConsoleKeyInfo key;
 
@@ -978,8 +1201,15 @@ namespace taynaya
 
                     if (pos == 2)
                     {
+                        Console.Clear();
+                        sklad_del();
+                    }
+
+                    if(pos == 3)
+                    {
                         return;
                     }
+
                 }
 
                 Console.Clear();
@@ -1002,6 +1232,7 @@ namespace taynaya
 
                 Console.WriteLine("Введите код продукта...");
                 rez_sklad.kod = Console.ReadLine();
+                
                 while (!int.TryParse(rez_sklad.kod, out rezerv))
                 {
                     Console.WriteLine("Введен некорректный код.");
@@ -1029,9 +1260,16 @@ namespace taynaya
                     ok = true;
                 }
 
-                if (ok)
+                if ((rez_sklad.kod[0] == '+') || (rez_sklad.kod[0] == '-'))
                 {
-                    break;
+                    continue;
+                }
+                else
+                {
+                    if (ok)
+                    {
+                        break;
+                    }
                 }
 
             }
@@ -1071,20 +1309,50 @@ namespace taynaya
 
             }
 
-            Console.WriteLine("Введите количество...");
-            rez_sklad.kol = Console.ReadLine();
-            while (!long.TryParse(rez_sklad.kol, out rez))
+            while (true)
             {
-                Console.WriteLine("Введено некорректное значение!");
+
+                Console.WriteLine("Введите количество...");
                 rez_sklad.kol = Console.ReadLine();
+
+                while (!long.TryParse(rez_sklad.kol, out rez))
+                {
+                    Console.WriteLine("Введено некорректное значение!");
+                    rez_sklad.kol = Console.ReadLine();
+                }
+
+                if ((rez_sklad.kol[0] == '+') || (rez_sklad.kol[0] == '-'))
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+
             }
 
-            Console.WriteLine("Введите стоймость...");
-            rez_sklad.stoimost = Console.ReadLine();
-            while (!long.TryParse(rez_sklad.stoimost, out rez))
+            while (true)
             {
-                Console.WriteLine("Введено некорректное значение!");
+
+                Console.WriteLine("Введите стоймость...");
                 rez_sklad.stoimost = Console.ReadLine();
+
+                while (!long.TryParse(rez_sklad.stoimost, out rez))
+                {
+                    Console.WriteLine("Введено некорректное значение!");
+                    rez_sklad.stoimost = Console.ReadLine();
+                }
+
+                if ((rez_sklad.stoimost[0] == '+') || (rez_sklad.stoimost[0] == '-'))
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+
             }
 
             Console.Clear();
@@ -1154,9 +1422,57 @@ namespace taynaya
             return;
         }
 
+        static void sklad_del()
+        {
+            BinaryWriter bw;
+            string name;
+            int count, count2;
+
+            if (sklad_data.Count == 0)
+            {
+                Console.WriteLine("Отсутствуют данные для удаления.");
+                Console.ReadKey();
+                Console.Clear();
+                return;
+            }
+
+            Console.WriteLine("Введите название товара...");
+            name = Console.ReadLine();
+
+            for (count = 0; count < sklad_data.Count; count++)
+            {
+                if (sklad_data[count].name == name)
+                {
+                    sklad_data.RemoveAt(count);
+                    Console.WriteLine("Успех!");
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    bw = new BinaryWriter(new FileStream("C:/Taynaya/sklad", FileMode.Create));
+
+                    for(count2 = 0; count2 < sklad_data.Count; count2++)
+                    {
+                        bw.Write(sklad_data[count2].kod);
+                        bw.Write(sklad_data[count2].name);
+                        bw.Write(sklad_data[count2].kol);
+                        bw.Write(sklad_data[count2].stoimost);
+                    }
+
+                    bw.Close();
+
+                    return;
+                }
+            }
+
+            Console.WriteLine("Таких данных нет. Невозможно удалить то, чего нет.");
+            Console.ReadKey();
+            Console.Clear();
+            return;
+
+        }
         static void kassam()
         {
-            string[] menu = { "Добавить кассовую операцию.", "Просмотр кассовых операций.", "Выход." };
+            string[] menu = { "Добавить кассовую операцию.", "Просмотр кассовых операций.", "Удалить кассовую операцию.", "Выход." };
             int count, count2, pos = 0;
             ConsoleKeyInfo key;
 
@@ -1220,8 +1536,15 @@ namespace taynaya
 
                     if (pos == 2)
                     {
+                        Console.Clear();
+                        kassa_del();
+                    }
+
+                    if(pos == 3)
+                    {
                         return;
                     }
+
                 }
 
                 Console.Clear();
@@ -1243,14 +1566,31 @@ namespace taynaya
 
             Console.WriteLine("Введите номер пользователя...");
             rez_kassa.number = Console.ReadLine();
+            
             rez_kassa.data = DateTime.Now.ToString();
 
-            Console.WriteLine("Введите количество товаров...");
-            rez_kassa.kol_tovari = Console.ReadLine();
-            while (!long.TryParse(rez_kassa.kol_tovari, out rez))
+            while (true)
             {
-                Console.WriteLine("Введено некорректное значение!");
+
+                Console.WriteLine("Введите количество товаров...");
                 rez_kassa.kol_tovari = Console.ReadLine();
+
+                while (!long.TryParse(rez_kassa.kol_tovari, out rez))
+                {
+                    Console.WriteLine("Введено некорректное значение!");
+                    rez_kassa.kol_tovari = Console.ReadLine();
+                }
+
+                if ((rez_kassa.kol_tovari[0] == '+') || (rez_kassa.kol_tovari[0] == '-'))
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                      
+                }
+
             }
 
             for (count = 0; count < rez; count++)
@@ -1319,6 +1659,54 @@ namespace taynaya
             return;
         }
 
+        static void kassa_del()
+        {
+            BinaryWriter bw;
+            string number;
+            int count, count2;
+
+            if (kassa_data.Count == 0)
+            {
+                Console.WriteLine("Отсутствуют данные для удаления.");
+                Console.ReadKey();
+                Console.Clear();
+                return;
+            }
+
+            Console.WriteLine("Введите номер пользователя...");
+            number = Console.ReadLine();
+
+            for (count = 0; count < kassa_data.Count; count++)
+            {
+                if (kassa_data[count].number == number)
+                {
+                    kassa_data.RemoveAt(count);
+                    Console.WriteLine("Успех!");
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    bw = new BinaryWriter(new FileStream("C:/Taynaya/kassa", FileMode.Create));
+
+                    for(count2 = 0; count2 < kassa_data.Count; count2++)
+                    {
+                        bw.Write(kassa_data[count2].number);
+                        bw.Write(kassa_data[count2].data);
+                        bw.Write(kassa_data[count2].tovari);
+                    }
+
+                    bw.Close();
+
+                    return;
+                }
+            }
+
+            Console.WriteLine("Таких данных нет. Невозможно удалить то, чего нет.");
+            Console.ReadKey();
+            Console.Clear();
+            return;
+
+        }
+
         static void Main(string[] args)
         {
 
@@ -1357,3 +1745,4 @@ namespace taynaya
         }
     }
 }
+
