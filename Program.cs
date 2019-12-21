@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -458,10 +458,22 @@ namespace taynaya
 
             Console.WriteLine("Введите имя...");
             rez_kadri.name = Console.ReadLine();
+            while(rez_kadri.name == "")
+            {
+                rez_kadri.name = Console.ReadLine();
+            }
             Console.WriteLine("Введите фамилию...");
             rez_kadri.familiya = Console.ReadLine();
+            while (rez_kadri.familiya == "")
+            {
+                rez_kadri.familiya = Console.ReadLine();
+            }
             Console.WriteLine("Введите отчество...");
             rez_kadri.otchestvo = Console.ReadLine();
+            while (rez_kadri.otchestvo == "")
+            {
+                rez_kadri.otchestvo = Console.ReadLine();
+            }
 
             while (true)
             {
@@ -747,7 +759,6 @@ namespace taynaya
 
             Console.WriteLine("Введите первую должность...");
             rez_kadri.doljnost = Console.ReadLine() + ";";
-
             Console.WriteLine("Введите вторую должность...");
             rez_kadri.doljnost += Console.ReadLine() + ";";
 
@@ -761,6 +772,27 @@ namespace taynaya
 
             Console.WriteLine("Введите образование...");
             rez_kadri.obrazovanie = Console.ReadLine();
+
+            Console.Clear();
+
+            Console.WriteLine();
+
+            Console.WriteLine(rez_kadri.name);
+            Console.WriteLine(rez_kadri.familiya);
+            Console.WriteLine(rez_kadri.otchestvo);
+            Console.WriteLine(rez_kadri.number_dogovora);
+            Console.WriteLine(rez_kadri.day_rojdeniya);
+            Console.WriteLine(rez_kadri.mesac_rojdeniya);
+            Console.WriteLine(rez_kadri.year_rojdeniya);
+            Console.WriteLine(rez_kadri.pasport_seriya);
+            Console.WriteLine(rez_kadri.pasport_number);
+            Console.WriteLine(rez_kadri.snils);
+            Console.WriteLine(rez_kadri.inn);
+            Console.WriteLine(rez_kadri.doljnost);
+            Console.WriteLine(rez_kadri.oklad);
+            Console.WriteLine(rez_kadri.obrazovanie);
+            Console.ReadKey();
+
 
             bw.Write(rez_kadri.name);
             bw.Write(rez_kadri.familiya);
@@ -778,6 +810,8 @@ namespace taynaya
             bw.Write(rez_kadri.obrazovanie);
 
             bw.Close();
+
+            Console.Clear();
 
             kadri_data = new List<kadri>();
 
@@ -823,17 +857,17 @@ namespace taynaya
             for (count = 0; count < kadri_data.Count; count++)
             {
                 
-                Console.WriteLine(kadri_data[count].name);
-                Console.WriteLine(kadri_data[count].familiya);
-                Console.WriteLine(kadri_data[count].otchestvo);
-                Console.WriteLine(kadri_data[count].number_dogovora);
-                Console.WriteLine(kadri_data[count].day_rojdeniya + "." + kadri_data[count].mesac_rojdeniya + "." + kadri_data[count].year_rojdeniya) ;
-                Console.WriteLine(kadri_data[count].pasport_seriya + " " + kadri_data[count].pasport_number);
-                Console.WriteLine(kadri_data[count].snils);
-                Console.WriteLine(kadri_data[count].inn);
-                Console.WriteLine(kadri_data[count].doljnost);
-                Console.WriteLine(kadri_data[count].oklad);
-                Console.WriteLine(kadri_data[count].obrazovanie);
+                Console.WriteLine("Имя: " + kadri_data[count].name);
+                Console.WriteLine("Фамилия: " + kadri_data[count].familiya);
+                Console.WriteLine("Отчество: " + kadri_data[count].otchestvo);
+                Console.WriteLine("Номер договора: " + kadri_data[count].number_dogovora);
+                Console.WriteLine("Дата рождения: " + kadri_data[count].day_rojdeniya + "." + kadri_data[count].mesac_rojdeniya + "." + kadri_data[count].year_rojdeniya) ;
+                Console.WriteLine("Паспортные данные: " + kadri_data[count].pasport_seriya + " " + kadri_data[count].pasport_number);
+                Console.WriteLine("СНИЛС: " + kadri_data[count].snils);
+                Console.WriteLine("ИНН: " + kadri_data[count].inn);
+                Console.WriteLine("Должности: " + kadri_data[count].doljnost);
+                Console.WriteLine("Оклад: " + kadri_data[count].oklad);
+                Console.WriteLine("Образование: " + kadri_data[count].obrazovanie);
 
                 Console.WriteLine();
 
@@ -861,9 +895,19 @@ namespace taynaya
 
             Console.WriteLine("Введите имя рабочего...");
             name = Console.ReadLine();
+            
+            while(name == "")
+            {
+                name = Console.ReadLine();
+            }
+
             Console.WriteLine("Введите фамилию рабочего...");
             familiya = Console.ReadLine();
 
+            while(familiya == "")
+            {
+                familiya = Console.ReadLine();
+            }
 
             for (count = 0; count < kadri_data.Count; count++)
             {
@@ -1002,6 +1046,11 @@ namespace taynaya
 
             Console.WriteLine("Введите имя операции...");
             rez_bugalteria.name = Console.ReadLine();
+            while (rez_bugalteria.name == "")
+            {
+                rez_bugalteria.name = Console.ReadLine();
+            }
+            
             rez_bugalteria.data = DateTime.Now.ToString();
 
             while (true)
@@ -1036,9 +1085,9 @@ namespace taynaya
             Console.WriteLine(rez_bugalteria.summa);
             Console.ReadKey();
 
-            bw.Write(rez_bugalteria.name);
-            bw.Write(rez_bugalteria.data);
-            bw.Write(rez_bugalteria.summa);
+            bw.Write("Имя операции: " + rez_bugalteria.name);
+            bw.Write("Дата операции: " + rez_bugalteria.data);
+            bw.Write("Сумма операции: " + rez_bugalteria.summa);
 
             bw.Close();
 
@@ -1076,9 +1125,9 @@ namespace taynaya
             for (count = 0; count < Bugalteria_data.Count; count++)
             {
 
-                Console.WriteLine(Bugalteria_data[count].name);
-                Console.WriteLine(Bugalteria_data[count].data);
-                Console.WriteLine(Bugalteria_data[count].summa);
+                Console.WriteLine("Название операции: " + Bugalteria_data[count].name);
+                Console.WriteLine("Дата операции: " + Bugalteria_data[count].data);
+                Console.WriteLine("Сумма опрации: " + Bugalteria_data[count].summa);
                 Console.WriteLine();
 
             }
@@ -1104,6 +1153,11 @@ namespace taynaya
 
             Console.WriteLine("Введите имя операции...");
             name = Console.ReadLine();
+
+            while(name == "")
+            {
+                name = Console.ReadLine();
+            }
 
             for(count = 0; count < Bugalteria_data.Count; count++)
             {
@@ -1282,6 +1336,11 @@ namespace taynaya
                 Console.WriteLine("Введите имя продукта...");
                 rez_sklad.name = Console.ReadLine();
 
+                while(rez_sklad.name == "")
+                {
+                    rez_sklad.name = Console.ReadLine();
+                }
+
                 for (count = 0; count < sklad_data.Count; count++)
                 {
                     if (rez_sklad.name == sklad_data[count].name)
@@ -1359,10 +1418,10 @@ namespace taynaya
 
             Console.WriteLine();
 
-            Console.WriteLine(rez_sklad.kod);
-            Console.WriteLine(rez_sklad.name);
-            Console.WriteLine(rez_sklad.kol);
-            Console.WriteLine(rez_sklad.stoimost);
+            Console.WriteLine("Код продукта: " + rez_sklad.kod);
+            Console.WriteLine("Название продукта: " + rez_sklad.name);
+            Console.WriteLine("Количество продукта: " + rez_sklad.kol);
+            Console.WriteLine("Стоймость продукта: " + rez_sklad.stoimost);
             Console.ReadKey();
 
             bw.Write(rez_sklad.kod);
@@ -1408,10 +1467,10 @@ namespace taynaya
 
             for (count = 0; count < sklad_data.Count; count++)
             {
-                Console.WriteLine(sklad_data[count].kod);
-                Console.WriteLine(sklad_data[count].name);
-                Console.WriteLine(sklad_data[count].kol);
-                Console.WriteLine(sklad_data[count].stoimost);
+                Console.WriteLine("Код продукта: " + sklad_data[count].kod);
+                Console.WriteLine("Имя продукта: " + sklad_data[count].name);
+                Console.WriteLine("Количество продукта: " + sklad_data[count].kol);
+                Console.WriteLine("Стоймость продукта: " + sklad_data[count].stoimost);
 
                 Console.WriteLine();
 
@@ -1438,6 +1497,11 @@ namespace taynaya
 
             Console.WriteLine("Введите название товара...");
             name = Console.ReadLine();
+
+            while(name == "")
+            {
+                name = Console.ReadLine();
+            }
 
             for (count = 0; count < sklad_data.Count; count++)
             {
@@ -1593,7 +1657,7 @@ namespace taynaya
 
             }
 
-            for (count = 0; count < rez; count++)
+            for (count = 1; count <= rez; count++)
             {
                 Console.WriteLine("Введите товар " + count);
                 rez_kassa.tovari += Console.ReadLine() + ";";
@@ -1603,9 +1667,9 @@ namespace taynaya
 
             Console.WriteLine();
 
-            Console.WriteLine(rez_kassa.number);
-            Console.WriteLine(rez_kassa.data);
-            Console.WriteLine(rez_kassa.tovari);
+            Console.WriteLine("Номер покупателя: " + rez_kassa.number);
+            Console.WriteLine("Дата покупки: " + rez_kassa.data);
+            Console.WriteLine("Массив товаров: " + rez_kassa.tovari);
             Console.ReadKey();
 
             bw.Write(rez_kassa.number);
@@ -1647,9 +1711,9 @@ namespace taynaya
 
             for (count = 0; count < kassa_data.Count; count++)
             {
-                Console.WriteLine(kassa_data[count].number);
-                Console.WriteLine(kassa_data[count].data);
-                Console.WriteLine(kassa_data[count].tovari);
+                Console.WriteLine("Номер пользователя: " + kassa_data[count].number);
+                Console.WriteLine("Дата покупки: " + kassa_data[count].data);
+                Console.WriteLine("Массив товаров: " + kassa_data[count].tovari);
                 Console.WriteLine();
 
             }
@@ -1745,4 +1809,3 @@ namespace taynaya
         }
     }
 }
-
